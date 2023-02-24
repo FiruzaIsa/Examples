@@ -6,3 +6,4 @@ static string GetCalendarSeason(DateTime date) => date.Month switch
     12 or (>= 1 and < 3) => "Qış",
     _ => throw new ArgumentOutOfRangeException(nameof(date), $"Tarix düzgün daxil edilməyib: {date.Month}."),
 };
+static bool IsLetter(char c) => c is (>= 'a' and <= 'z') or (>= 'A' and <= 'Z');
