@@ -1,0 +1,8 @@
+static string GetCalendarSeason(DateTime date) => date.Month switch
+{
+    >= 3 and < 6 => "Yaz",
+    >= 6 and < 9 => "Yay",
+    >= 9 and < 12 => "Payız",
+    12 or (>= 1 and < 3) => "Qış",
+    _ => throw new ArgumentOutOfRangeException(nameof(date), $"Tarix düzgün daxil edilməyib: {date.Month}."),
+};
